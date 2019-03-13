@@ -26,6 +26,9 @@ from sklearn.pipeline import make_pipeline
 
 from sklearn.metrics import mean_absolute_error
 
+import warnings
+warnings.filterwarnings("ignore")
+
 
 # In[2]:
 
@@ -343,10 +346,4 @@ plt.title('XG Booster Regression')
 plt.xlabel('Test Outcome')
 plt.ylabel('Test Predictions')
 plt.show()
-
-
-# In[ ]:
-
-
-
 
