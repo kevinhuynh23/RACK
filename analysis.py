@@ -93,37 +93,37 @@ violet_to_indigo
 # Map of Seattle Airbnb listings by price
 fig_map_seattle_listings_price, ax = plt.subplots(figsize = (15, 15))
 base = shp.plot(ax = ax, color = 'grey')
-lis_raw[lis_raw.price_int <= 50].plot(ax = base,
+lis_raw[lis_raw.price_float <= 50].plot(ax = base,
                               marker = 'o',
                               color = 'violet',
                               markersize = 5,
                               alpha = 0.5,
                               label = '<$50')
-lis_raw[(lis_raw.price_int > 50) & (lis_raw.price_int < 100)].plot(ax = base,
+lis_raw[(lis_raw.price_float > 50) & (lis_raw.price_float < 100)].plot(ax = base,
                                                        marker = 'o',
                                                        color = '#e054ed',
                                                        markersize = 5,
                                                        alpha = 0.5,
                                                        label = '$50-99')
-lis_raw[(lis_raw.price_int >= 100) & (lis_raw.price_int < 150)].plot(ax = base,
+lis_raw[(lis_raw.price_float >= 100) & (lis_raw.price_float < 150)].plot(ax = base,
                                                          marker = 'o',
                                                          color = '#cc23ee',
                                                          markersize = 5,
                                                          alpha = 0.5,
                                                          label = '$100-149')
-lis_raw[(lis_raw.price_int >= 150) & (lis_raw.price_int < 200)].plot(ax = base,
+lis_raw[(lis_raw.price_float >= 150) & (lis_raw.price_float < 200)].plot(ax = base,
                                                          marker = 'o',
                                                          color = '#a30bd6',
                                                          markersize = 5,
                                                          alpha = 0.5,
                                                          label = '$150-199')
-lis_raw[(lis_raw.price_int >= 200) & (lis_raw.price_int < 250)].plot(ax = base,
+lis_raw[(lis_raw.price_float >= 200) & (lis_raw.price_float < 250)].plot(ax = base,
                                                          marker = 'o',
                                                          color = '#7404ad',
                                                          markersize = 5,
                                                          alpha = 0.5,
                                                          label = '$200-249')
-lis_raw[(lis_raw.price_int >= 250)].plot(ax = base,
+lis_raw[(lis_raw.price_float >= 250)].plot(ax = base,
                                  marker = 'o',
                                  color = 'indigo',
                                  markersize = 5,
@@ -140,7 +140,7 @@ plt.show()
 
 # Graph of review rating vs. price
 fig_rating_vs_price = plt.figure(figsize = (10, 10))
-plt.scatter(lis.review_scores_rating, lis.price_int, alpha = 0.5, color = 'mediumseagreen')
+plt.scatter(lis.review_scores_rating, lis.price_float, alpha = 0.5, color = 'mediumseagreen')
 plt.xlabel('Review Rating')
 plt.ylabel('Price in USD')
 plt.title('Rating vs. Price for Seattle Listings')
@@ -152,7 +152,7 @@ plt.show()
 
 # Graph of number of amenities vs. price
 fig_num_amenities_vs_price = plt.figure(figsize = (10, 10))
-plt.scatter(lis.amenities_count, lis.price_int, alpha = 0.5, color = 'slateblue')
+plt.scatter(lis.amenities_count, lis.price_float, alpha = 0.5, color = 'slateblue')
 plt.xlabel('Number of Amenities')
 plt.ylabel('Price in USD')
 plt.title('Number of Amenities vs. Price for Seattle Listings')
@@ -176,7 +176,7 @@ plt.show()
 
 # Graph of number of beds vs. price
 fig_num_beds_vs_price = plt.figure(figsize = (10, 10))
-plt.scatter(lis.beds, lis.price_int)
+plt.scatter(lis.beds, lis.price_float, color = 'fuchsia')
 plt.xlabel('Number of Beds')
 plt.ylabel('Price in USD')
 plt.title('Number of Beds vs. Price for Seattle Listings')
@@ -188,8 +188,8 @@ plt.show()
 
 # Graph of number of bedrooms vs. price
 fig_num_bedrooms_vs_price = plt.figure(figsize = (10, 10))
-plt.scatter(lis.bedrooms, lis.price_int)
-plt.xlabel('Number of Beds')
+plt.scatter(lis.bedrooms, lis.price_float, color = 'goldenrod')
+plt.xlabel('Number of Bedrooms')
 plt.ylabel('Price in USD')
 plt.title('Number of Bedrooms vs. Price for Seattle Listings')
 plt.show()
@@ -200,8 +200,8 @@ plt.show()
 
 # Graph of number of bathrooms vs. price
 fig_num_bathrooms_vs_price = plt.figure(figsize = (10, 10))
-plt.scatter(lis.bathrooms, lis.price_int)
-plt.xlabel('Number of Beds')
+plt.scatter(lis.bathrooms, lis.price_float, color = 'teal')
+plt.xlabel('Number of Bathrooms')
 plt.ylabel('Price in USD')
 plt.title('Number of Bathrooms vs. Price for Seattle Listings')
 plt.show()
