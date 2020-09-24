@@ -2,6 +2,8 @@
 
 Calvin Chan, Alex Huang, Kevin Huynh, Rachel Vuu
 
+Our resource can be found [here](https://github.com/kevinhuynh23/RACK).
+
 ## Project Description
 
 For our final project, we selected the [Seattle Airbnb dataset](https://www.kaggle.com/airbnb/seattle), which contains a calendar file documenting the price point and availability of a listing on a day of the year, a descriptive file with a number of features including neighborhood, price, and ratings, and a file consisting of guest reviews. 
