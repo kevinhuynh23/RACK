@@ -2,7 +2,7 @@
 
 Calvin Chan, Alex Huang, Kevin Huynh, Rachel Vuu
 
-Our resource can be found [here](https://github.com/kevinhuynh23/RACK).
+Our resource can be found [here](https://kevinhuynh23.github.io/RACK/).
 
 ## Project Description
 
